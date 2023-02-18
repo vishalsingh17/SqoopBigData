@@ -37,7 +37,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ### Changing the docker permission
 ```
-sudo user,od -aG docker <username>
+sudo usermod -aG docker <username>
 ```
 
 ```

@@ -48,3 +48,17 @@ newgrp docker
 ```
 docker run --hostname=quickstart.cloudera --privileged=true -t -i -v /home/ubuntu:/Src --publish-all=true -p 8888 cloudera/quickstart:latest /usr/bin/docker-quickstart
 ```
+
+### For chechking Sqoop version
+```
+sqoop version
+```
+
+### Opening the SQL terminal
+```
+mysql -uroot -pcloudera
+```
+###### Now you can run the required queries
+```
+show databases;
+```

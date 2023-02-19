@@ -113,3 +113,33 @@ hdfs dfs -cat /user/root/categories/part-m-00000
 ```
 hdfs dfs -cat /user/root/categories/part*
 ```
+
+### To run SQL queries in Sqoop commands
+```
+sqoop eval \
+--connect jdbc:mysql://localhost:3306/ \
+--username root \
+--password cloudera \
+--query "show databases"
+```
+
+```
+# see all the tables
+sqoop eval \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username root \
+--password cloudera \
+--query "show tables"
+```
+
+### Split-by parameter
+To split the column based on the user's input we can use --split-by
+```
+sqoop import \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--table categories \
+--username root \
+--password cloudera \
+--boundary-query "select min(category_id), max(category_id) from categories" \
+--split-by category_id
+```

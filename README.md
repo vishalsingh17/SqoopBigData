@@ -38,7 +38,7 @@ Sqoop helped to transfer the large volume of data stored in the RDBMS to Hadoop.
 1. Import
 2. Export
 
-![image1.png](Sqoop%20e3cbb172071042cc88734becefb19854/image1.png)
+![image1](https://user-images.githubusercontent.com/55878408/219950615-8872cb9a-2106-4702-96f2-6715ded178ac.png)
 
 The operations is Sqoop are user friendly. Sqoop uses CLI to process commands given by the user.  Sqoop also used Java APIs to interact with the users. Sqoop only performs the import and export of data based on the commands given by the users. Sqoop can’t do the aggregation of data. 
 

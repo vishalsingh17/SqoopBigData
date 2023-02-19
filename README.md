@@ -62,3 +62,54 @@ mysql -uroot -pcloudera
 ```
 show databases;
 ```
+
+## Sqoop Commands
+
+### List the databases
+```
+sqoop list-databases --connect jdbc:mysql://localhost:3306 --username root --password cloudera
+```
+
+### Listing tables
+```
+sqoop list-tables \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--username root \
+--password cloudera
+```
+
+### importing categories table from MySQL db
+```
+sqoop import \
+--connect jdbc:mysql://localhost:3306/retail_db \
+--table categories \
+--username root \
+--password cloudera
+```
+There are 4 things that we can see in the output
+
+- Data is selected with “Select” command
+- Min & Max query is applied
+- Default no of split = 4
+- Mapper & Reducer task gets executed
+
+### Verify our data in HDFS
+```
+hdfs dfs -ls /
+
+hdfs dfs -ls /user
+
+hdfs dfs -ls /user/root
+
+hdfs dfs -ls /user/root/categories
+```
+
+### To view the specific part file
+```
+hdfs dfs -cat /user/root/categories/part-m-00000
+```
+
+### To view whole data
+```
+hdfs dfs -cat /user/root/categories/part*
+```

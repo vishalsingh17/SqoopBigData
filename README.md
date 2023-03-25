@@ -340,7 +340,7 @@ Now let’s put the the password file in HDFS and use it from there.
 
 ```bash
 # picking the file from edge node to hdfs
-hdfs dfs put file:///sqoop.pwd /user/cloudera
+hdfs dfs -put file:///sqoop.pwd /user/cloudera
 
 # import table
 sqoop import \

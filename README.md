@@ -1230,8 +1230,8 @@ sqoop export \
 The data will be first inserted into the staging table and then loaded into the main table. Once, loaded into the main table the data will be truncated from the staging table.
 
 ## Links for Virtual Box and Ubuntu 22.04
-- https://www.virtualbox.org/wiki/Downloads
+- [Virtual Box Link](https://www.virtualbox.org/wiki/Downloads)
 
-- https://ubuntu.com/download/desktop/thank-you?version=22.04.2&architecture=amd64
+- [Ubuntu Link](https://ubuntu.com/download/desktop/thank-you?version=22.04.2&architecture=amd64)
 
-- Reference Video - https://www.youtube.com/watch?v=v1JVqd8M3Yc&t=623s
+- [Reference Video](https://www.youtube.com/watch?v=v1JVqd8M3Yc)

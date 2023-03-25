@@ -102,7 +102,9 @@ select * from <table_name>
 Lets open another terminal and try to see if we Sqoop works fine
 
 ```bash
-docker run --hostname=quickstart.cloudera --privileged=true -t -i -v /home/ubuntu:/Src --publish-all=true -p 8888 cloudera/quickstart:latest /usr/bin/docker-quickstart
+docker ps -a
+
+docker exec -it <container_id> bash
 
 # check version
 sqoop version  
